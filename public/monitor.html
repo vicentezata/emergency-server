@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Base</title>
+    <script>
+	const socket = new WebSocket("wss://emergency-server-9.onrender.com");
+
+	socket.onmessage = (event) => {
+    const data = event.data;
+    alert("🚨 Emergency Alert: " + data);
+	};
+    </script>
+</head>
+<body>
+    <h2>Monitoring Base</h2>
+    <p>Waiting for emergency signals...</p>
+</body>
+</html>
